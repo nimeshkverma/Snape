@@ -4,11 +4,11 @@ import pprint
 
 name = raw_input("What\'s your name?\n")
 name = name.strip()
-#pprint.pprint(ranu)
-#exit()
+
 flag = 1;
 while flag :	
-	if not name:
+	if not name or not all(x.isalpha() or x.isspace() for x in name):
+		print "Incorrect Input. Only letters and space are allowed\n."
 		name = raw_input("What\'s your name?\n")
 		name = name.strip()
 	else :
