@@ -8,9 +8,11 @@ name = name.strip()
 flag = 1;
 while flag :	
 	if not name or not all(x.isalpha() or x.isspace() for x in name):
-		print "Incorrect Input. Only letters and space are allowed\n."
+		print "Incorrect Input. Only letters and space are allowed.\nOR\n Press 0000 to exit!"
 		name = raw_input("What\'s your name?\n")
 		name = name.strip()
+		if name == '0000':
+			exit()
 	else :
 		flag = 0
 data = { 
